@@ -10,5 +10,3 @@ RUN apt-get update && \
 
 COPY requirements.txt .
 RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/wheels -r requirements.txt
-
-CMD ["python3", "manage.py", "runserver", "0:8000"]
